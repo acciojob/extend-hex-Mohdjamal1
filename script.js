@@ -1,18 +1,8 @@
 const extendHex = (shortHex) => {
   // write your code here
-	let str = '#';
-	if (shortHex.charAt(0) === '#') {
-		for (let i = 1; i < shortHex.length; i++) {
-			str += shortHex.charAt(i) + shortHex.charAt(i);
-		}
-	}
-	else{
-		for (let i = 0; i < shortHex.length; i++) {
-			str += shortHex.charAt(i) + shortHex.charAt(i);
-		}
-	}
-	// 
-	return str;
+ return '#'+shortHex.slice(shortHex.startsWith('#') ? 1 : 0).split('').map(i => i+i).join('');
+ // let longHex = str.split('');
+// return '#' +longHex.map(i=>{return i + i}).join('');
 };
 
 // Do not change the code below.
